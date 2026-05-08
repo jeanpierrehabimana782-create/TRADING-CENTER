@@ -3,25 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>TRADING CENTER</title>
-    <!-- No external CSS – all styling is preserved from original structure.
-         The original design used 'css/main.css' which may not exist, but we keep layout 
-         identical using embedded styles that match typical trading center aesthetics.
-         Since original file might have had external CSS, we provide identical fallback 
-         styling to ensure the page looks exactly as intended, without altering any class names 
-         or button appearances. The 'purchase-btn' class remains visually identical to original.
-         To guarantee 'completely untouched' structure, we add no extra classes, only internal 
-         style that replicates expected default styling. No functional changes to layout. -->
+    <title>JEANPIERRE TRADING CENTER | Quality & Trust</title>
     <style>
-        /* ===== ORIGINAL CSS PRESERVED STRUCTURALLY ===== 
-           This mirrors the expected 'css/main.css' behavior exactly.
-           No new properties introduced for buttons except what was originally there.
-           The original design likely included these base styles; we ensure no deviation. 
-           All selectors, colors, spacing remain classic. Purchase buttons keep original text, 
-           background, hover effects (standard button look). Absolutely no changes to button 
-           styles except preserving original 'Buy Now' which was replaced by 'purchase' 
-           (already done in given HTML). We maintain full integrity. */
-        
         * {
             margin: 0;
             padding: 0;
@@ -159,9 +142,6 @@
             margin-bottom: 1rem;
         }
 
-        /* ===== ORIGINAL BUTTON STYLE (exactly as default browser button but with preserved class) 
-           The original design used .purchase-btn with identical visuals to replaced 'Buy Now' buttons.
-           No changes — background, padding, border-radius, font remain classic. */
         .purchase-btn {
             background: #ff9800;
             color: white;
@@ -186,12 +166,173 @@
             transform: scale(0.98);
         }
 
+        .contact-square {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 650px;
+            border: 1px solid #e9ecef;
+            transition: all 0.2s;
+        }
+
+        .contact-square h3 {
+            font-size: 1.6rem;
+            color: #1e2a3a;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            border-left: 4px solid #ff9800;
+            padding-left: 1rem;
+        }
+
+        .contact-square .subhead {
+            color: #5f6c7a;
+            margin-bottom: 1.8rem;
+            font-size: 0.9rem;
+            padding-left: 1.2rem;
+        }
+
+        .contact-info-display {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item:hover {
+            background: #f1f5f9;
+            padding-left: 8px;
+            border-radius: 12px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            min-width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icon-svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 0.7rem;
+            color: #5f6c7a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-value {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1e2a3a;
+            word-break: break-all;
+        }
+
+        .click-hint {
+            font-size: 0.65rem;
+            color: #ff9800;
+            margin-top: 4px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px dashed #e2e8f0;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            color: #2c3e4e;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .input-group input, 
+        .input-group textarea {
+            padding: 12px 16px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 18px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: 0.2s;
+            background: #fefefe;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: #ff9800;
+            box-shadow: 0 0 0 3px rgba(255,152,0,0.1);
+        }
+
+        .inline-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-contact {
+            background: #1e2a3a;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+            width: fit-content;
+        }
+
+        .submit-contact:hover {
+            background: #ff9800;
+            transform: scale(1.02);
+        }
+
         footer {
             text-align: center;
             padding: 1.5rem;
             background: #1e2a3a;
             color: #ccc;
             margin-top: 2rem;
+            font-size: 0.85rem;
         }
 
         @media (max-width: 768px) {
@@ -206,15 +347,21 @@
             .products-grid {
                 gap: 1rem;
             }
+            .inline-row {
+                grid-template-columns: 1fr;
+            }
+            .contact-square {
+                margin: 1.5rem 1rem;
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-left">
-            <!-- Logo image placeholder – original file used logo.png, kept as is -->
             <img src="logo.png" alt="JEANPIERRE TRADING CENTER logo" onerror="this.style.display='none'">
-            <span class="logo-text">JEANPIERRE TRADING CENTER </span>
+            <span class="logo-text">JEANPIERRE TRADING CENTER</span>
         </div>
         <nav class="nav-tabs">
             <a href="#" id="homeTab" class="active">Home</a>
@@ -224,7 +371,83 @@
     
     <div id="homeContent" class="content active">
         <h1>TRADING CENTER PLACE</h1>
-        <p>Your premier marketing place for quality products!</p>
+        <p>Your premier marketplace for quality products!</p>
+        
+        <div class="contact-square">
+            <h3>📬 Connect With Us</h3>
+            <div class="subhead">Click any contact method below to reach us instantly</div>
+            
+            <div class="contact-info-display">
+                <div class="contact-item" id="directEmailBtn">
+                    <div class="contact-icon">
+                        <svg class="social-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M22 7L12 13L2 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Email Address</div>
+                        <div class="contact-value">jeanpierrehabimana782@gmail.com</div>
+                        <div class="click-hint">✉️ Click to send email</div>
+                    </div>
+                </div>
+                
+                <div class="contact-item" id="directInstagramBtn">
+                    <div class="contact-icon">
+                        <svg class="social-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Instagram</div>
+                        <div class="contact-value">@jean_pierre_tech</div>
+                        <div class="click-hint">📱 Click to open Instagram</div>
+                    </div>
+                </div>
+                
+                <div class="contact-item" id="directTelegramBtn">
+                    <div class="contact-icon">
+                        <svg class="social-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5 4.5L2.5 11.5L8.5 13.5L13.5 18.5L16.5 10.5L20.5 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M8.5 13.5L13.5 18.5L20.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M8.5 13.5L3 16.5L4.5 20.5L8.5 13.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Telegram</div>
+                        <div class="contact-value">@0739587692</div>
+                        <div class="click-hint">💬 Click to message on Telegram</div>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="contactInfoForm" class="contact-form">
+                <div class="input-group">
+                    <label>📧 Your Email Address (for us to reply)</label>
+                    <input type="email" id="userEmail" placeholder="your@email.com" required>
+                </div>
+                
+                <div class="inline-row">
+                    <div class="input-group">
+                        <label>📸 Your Instagram (optional)</label>
+                        <input type="text" id="userInstagram" placeholder="@yourusername">
+                    </div>
+                    <div class="input-group">
+                        <label>✈️ Your Telegram (optional)</label>
+                        <input type="text" id="userTelegram" placeholder="@username or phone">
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>💬 Message / Question</label>
+                    <textarea rows="2" id="userNote" placeholder="I'm interested in..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-contact">💾 Send Message →</button>
+            </form>
+        </div>
     </div>
     
     <div id="productsContent" class="content">
@@ -274,12 +497,11 @@
         </div>
     </div>
     
-    <footer style="text-align: center; padding: 1rem; background: #1e2a3a; color: white; margin-top: 2rem; font-size: 0.85rem;">
+    <footer>
         <p>© JEANPIERRE TRADING CENTER — Quality & Trust</p>
     </footer>
 
     <script>
-        // ===== ORIGINAL TAB SWITCHING LOGIC (100% UNTOUCHED, PRESERVED) =====
         const homeTab = document.getElementById('homeTab');
         const productsTab = document.getElementById('productsTab');
         const homeContent = document.getElementById('homeContent');
@@ -301,36 +523,105 @@
             homeTab.classList.remove('active');
         });
         
-        
-        
         const WHATSAPP_NUMBER_INTL = '250791829759'; 
-        
-        // Select all purchase buttons (original DOM elements, no modifications to attributes except data-* added for product info)
         const purchaseBtns = document.querySelectorAll('.purchase-btn');
         
         purchaseBtns.forEach(btn => {
-            // Attach click event listener to open WhatsApp with product-specific message
             btn.addEventListener('click', function(event) {
                 event.preventDefault();
-                event.stopPropagation();  // avoid any potential side effects
-                
-                // Retrieve product name and price from data attributes (set in HTML)
+                event.stopPropagation();
                 const product = this.getAttribute('data-product') || 'product item';
                 const price = this.getAttribute('data-price') || '';
-                
-                // Create a clean, friendly message for customer to send to business owner
                 const messageBody = `Hello! I would like to purchase the ${product} ${price}. Please let me know availability and payment options. Thank you!`;
                 const encodedMsg = encodeURIComponent(messageBody);
-                
-                // Build WhatsApp deep link URL (works on all devices: mobile opens WhatsApp, desktop opens web.whatsapp.com)
                 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER_INTL}?text=${encodedMsg}`;
-                
-                // Open WhatsApp link in a new tab to ensure user stays on page and connects directly
                 window.open(whatsappUrl, '_blank');
             });
         });
         
-       
+        const BUSINESS_EMAIL = 'jeanpierrehabimana782@gmail.com';
+        const BUSINESS_INSTAGRAM = 'jean_pierre_tech';
+        const BUSINESS_TELEGRAM = '0739587692';
+        
+        const directEmailBtn = document.getElementById('directEmailBtn');
+        const directInstagramBtn = document.getElementById('directInstagramBtn');
+        const directTelegramBtn = document.getElementById('directTelegramBtn');
+        
+        if (directEmailBtn) {
+            directEmailBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const userEmail = localStorage.getItem('userEmail') || '';
+                const subject = `Inquiry from ${userEmail || 'customer'} - JEANPIERRE Trading Center`;
+                const bodyMessage = `Hello JEANPIERRE Trading Center,\n\nI am interested in your products.\n\nMy contact info:\nEmail: ${userEmail || 'not provided'}\nInstagram: ${localStorage.getItem('userInstagram') || 'not provided'}\nTelegram: ${localStorage.getItem('userTelegram') || 'not provided'}\n\nMessage: ${localStorage.getItem('userNote') || '—'}\n\nPlease get back to me.`;
+                const mailtoLink = `mailto:${BUSINESS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyMessage)}`;
+                window.open(mailtoLink, '_blank');
+            });
+        }
+        
+        if (directInstagramBtn) {
+            directInstagramBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const igUrl = `https://instagram.com/${BUSINESS_INSTAGRAM}`;
+                window.open(igUrl, '_blank');
+            });
+        }
+        
+        if (directTelegramBtn) {
+            directTelegramBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const tgUrl = `https://t.me/${BUSINESS_TELEGRAM}`;
+                window.open(tgUrl, '_blank');
+            });
+        }
+        
+        const contactForm = document.getElementById('contactInfoForm');
+        let storedEmail = '';
+        let storedInstagram = '';
+        let storedTelegram = '';
+        
+        if (localStorage.getItem('userEmail')) storedEmail = localStorage.getItem('userEmail');
+        if (localStorage.getItem('userInstagram')) storedInstagram = localStorage.getItem('userInstagram');
+        if (localStorage.getItem('userTelegram')) storedTelegram = localStorage.getItem('userTelegram');
+        
+        const emailInput = document.getElementById('userEmail');
+        const instagramInput = document.getElementById('userInstagram');
+        const telegramInput = document.getElementById('userTelegram');
+        const noteInput = document.getElementById('userNote');
+        
+        if (emailInput) emailInput.value = storedEmail;
+        if (instagramInput) instagramInput.value = storedInstagram;
+        if (telegramInput) telegramInput.value = storedTelegram;
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = emailInput.value.trim();
+            const insta = instagramInput.value.trim();
+            const tele = telegramInput.value.trim();
+            const note = noteInput.value.trim();
+            
+            if (!email) {
+                alert('Please enter your email address so we can reply to you.');
+                return;
+            }
+            
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userInstagram', insta);
+            localStorage.setItem('userTelegram', tele);
+            if (note) localStorage.setItem('userNote', note);
+            else localStorage.removeItem('userNote');
+            
+            storedEmail = email;
+            storedInstagram = insta;
+            storedTelegram = tele;
+            
+            const subject = `New message from ${email} - JEANPIERRE Trading Center`;
+            const bodyMessage = `Hello JEANPIERRE Trading Center,\n\nNew inquiry:\n\nFrom: ${email}\nInstagram: ${insta || 'not provided'}\nTelegram: ${tele || 'not provided'}\n\nMessage:\n${note || 'No additional message'}\n\nPlease contact me back.`;
+            const mailtoLink = `mailto:${BUSINESS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyMessage)}`;
+            
+            window.open(mailtoLink, '_blank');
+            
+            alert(`✅ Message prepared! Your email client will open.\nWe'll respond to ${email} as soon as possible.`);
+        });
     </script>
 </body>
 </html>
